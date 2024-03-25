@@ -1,7 +1,7 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, openModal }) {
   return (
     <Card className="movie-card">
       {movie.poster_path && (
@@ -9,12 +9,14 @@ function MovieCard({ movie }) {
           variant="top"
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
-          style={{ width: "100px", height: "150px" }}
+          style={{ maxWidth: "100%", maxHeight: "250px" }}
         />
       )}
       <Card.Body>
         <Card.Title>{movie.title}</Card.Title>
-        <Card.Text>{movie.overview}</Card.Text>
+        <Button variant="primary" onClick={() => openModal(movie)}>
+          Sinopse
+        </Button>
       </Card.Body>
     </Card>
   );

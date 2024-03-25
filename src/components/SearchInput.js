@@ -1,22 +1,38 @@
-import React, { useMemo } from "react";
+import React, { useState } from "react";
 
-function SearchInput({ placeholder, value, onChange, onSearch }) {
-  const memoizedPlaceholder = useMemo(() => placeholder, [placeholder]);
-  const memoizedValue = useMemo(() => value, [value]);
-  const memoizedOnChange = useMemo(() => onChange, [onChange]);
-  const memoizedOnSearch = useMemo(() => onSearch, [onSearch]);
+export default function SearchInput({
+  placeholder,
+  emptyInput,
+  onChange,
+  onTapSearch,
+}) {
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setSearchValue(value);
+    onChange(value);
+  };
 
   return (
-    <div className="search-input">
-      <input
-        type="text"
-        placeholder={memoizedPlaceholder}
-        value={memoizedValue}
-        onChange={memoizedOnChange}
-      />
-      <button onClick={memoizedOnSearch}>Search</button>
+    <div className="container">
+      <div className="input-group mb-3">
+        <input
+          type="text"
+          className="form-control"
+          placeholder={placeholder}
+          value={searchValue}
+          onChange={handleInputChange}
+        />
+        <button
+          className="btn btn-primary"
+          type="button"
+          onClick={onTapSearch}
+        >
+          Search
+        </button>
+      </div>
+      {emptyInput && <p className="text-primary">Campo vazio.</p>}
     </div>
   );
 }
-
-export default SearchInput;
