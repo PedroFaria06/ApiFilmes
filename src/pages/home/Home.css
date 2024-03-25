@@ -1,0 +1,8 @@
+.movie-card {
+    background-color: #333; /* Cor de fundo preta */
+    color: #fff; /* Cor do texto branca */
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #ff0000; /* Borda vermelha */
+  }
+  

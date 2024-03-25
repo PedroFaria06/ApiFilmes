@@ -1,0 +1,14 @@
+.header {
+    background-color: red;
+    padding: 10px;
+  }
+  
+  .movie-list {
+    display: flex;
+    overflow-x: auto;
+    background-color: black;
+    padding: 10px;
+  }
+  
+
+  
