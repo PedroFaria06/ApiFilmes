@@ -13,6 +13,10 @@ export default function SearchInput({
     setSearchValue(value);
     onChange(value);
   };
+const btnStyle = {
+  backgroundColor: "red", 
+  border: "none",
+}
 
   return (
     <div className="container">
@@ -26,13 +30,14 @@ export default function SearchInput({
         />
         <button
           className="btn btn-primary"
+          style={btnStyle}
           type="button"
           onClick={onTapSearch}
         >
-          Search
+          Buscar
         </button>
       </div>
-      {emptyInput && <p className="text-primary">Campo vazio.</p>}
+      {emptyInput && <p className="text-primary" >Campo vazio.</p>}
     </div>
   );
 }
