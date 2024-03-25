@@ -3,7 +3,7 @@ import { Navbar, Form, FormControl, Button } from "react-bootstrap";
 
 function Header({ onSearch }) {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="blue" variant="blue">
       <Navbar.Brand>Movie Search</Navbar.Brand>
       <Form inline className="ml-auto">
         <FormControl

@@ -6,19 +6,20 @@ import {
   Pagination,
   Button,
 } from "react-bootstrap";
-import api from "../../services/api";
 import SearchInput from "../../components/SearchInput";
 import MovieModal from "../../components/MovieModal";
 import MovieCard from "../../components/MovieCard";
-import "./Home.css"; // Import your custom CSS file
+import { useMovieContext } from "../../modules/MovieContext";
+import api from "../../services/api";
+import "./Home.css";
 
 function Home() {
-  const [movies, setMovies] = useState([]);
+  const { setSelectedMovie, setPoster } = useMovieContext();
+
   const [showModal, setShowModal] = useState(false);
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [movies, setMovies] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
-  const [poster, setPoster] = useState(null);
   const [emptyInput, setEmptyInput] = useState(false);
   const [count, setCount] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -154,10 +155,10 @@ function Home() {
           onChange={(event, value) => setPage(value)}
         />
 
-        <MovieModal show={showModal} handleClose={closeModal} movie={selectedMovie} poster={poster} />
+        <MovieModal show={showModal} handleClose={closeModal} />
       </Container>
     </div>
   );
 }
-
+//build
 export default Home;
