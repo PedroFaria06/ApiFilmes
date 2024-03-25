@@ -1,11 +1,11 @@
 .black-background {
-    background-color: black;
+    background-color: rgb(59, 158, 35);
 }
 
 
 .red-title {
     text-align: center;
-    color: red;
+    color: rgb(184, 162, 162);
 }
 
 
@@ -37,3 +37,4 @@
     background-color: darkred !important; 
     border: 1px solid darkred !important; 
   }
+  
