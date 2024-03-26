@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 
 function MovieCard({ movie, openModal }) {
   const cardStyle = {
-    backgroundColor: "red", 
+    backgroundColor: "blue", 
     color: "white", 
     border: "none",
     cursor: "pointer", 

@@ -1,40 +1,40 @@
 .black-background {
-    background-color: rgb(59, 158, 35);
+    background-color: rgb(58, 35, 158);
 }
 
 
 .red-title {
     text-align: center;
-    color: rgb(184, 162, 162);
+    color: rgb(7, 7, 7);
 }
 
 
 .card {
-    background-color: red;
-    color: white;
-    border: 1px solid red;
+    background-color: rgb(221, 41, 41);
+    color: rgb(3, 3, 3);
+    border: 1px solid rgb(255, 0, 0);
 }
 .page-navigation .btn {
-    background-color: red !important; 
-    color: white !important; 
-    border: 1px solid red !important; 
+    background-color: rgb(150, 14, 14) !important; 
+    color: rgb(251, 255, 252) !important; 
+    border: 1px solid rgb(255, 0, 0) !important; 
   }
   
 
   .page-navigation .btn:disabled {
-    background-color: lightgray !important; 
+    background-color: rgb(0, 0, 0) !important; 
     color: white !important; 
   }
   
 
   .page-navigation .btn:hover {
-    background-color: darkred !important; 
+    background-color: rgb(26, 20, 20) !important; 
     border: 1px solid darkred !important; 
   }
   
 
   .page-navigation .btn:active {
-    background-color: darkred !important; 
+    background-color: rgb(145, 4, 4) !important; 
     border: 1px solid darkred !important; 
   }
   
